@@ -8,18 +8,32 @@ class Esercizio {
     // Il programma parte con una chiamata a main().
     public static void main(String args[])
     {
-        //Variabili del programma
-        String nome;
+        String voti[n];
+        voti=new String [n];
+        String crediti[n];
+        crediti=new String[n];
+        int i=0;
+        float media=0, somma=0;
+        System.out.println("quanti studenti ci sono");
+        n=scanner.nextLine();
+        for (i=0; i<n; i++){
+            System.out.println("inserire il nome dello studente");
+            nomi[i]=scanner.nextLine();
+            System.out.println("inserire il voto dello studente");
+            voti[i]=scanner.nextfloat();
+            System.out.println("inserire i crediti");
+            crediti[i]=scanner.nextfloat();
 
-        //Creo l'oggetto in per l'input da tastiera
-        Scanner in = new Scanner( System.in );
 
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
+        }
+        for (i=0;i<n-1;i++){
+            somma=somma+voti[i];
+        }
+        media=somma/n;
+        if  (voti[i]>media || crediti[i]>=6){
+            System.out.println("nomi[i]");
+        }
 
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
     }
 }
 
